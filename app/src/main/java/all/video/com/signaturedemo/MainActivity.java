@@ -6,6 +6,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     SignatureView signatureView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
