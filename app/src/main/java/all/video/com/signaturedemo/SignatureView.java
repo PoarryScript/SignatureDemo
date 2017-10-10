@@ -73,6 +73,8 @@ public class SignatureView extends View {
             case MotionEvent.ACTION_MOVE:
             case MotionEvent.ACTION_UP:
                 resetDirtyRect(x, y);
+                //When the hardware tracks events faster than they are delivered,
+                // the event will contain a history of those skipped points.
                 int size = event.getHistorySize();
                 for (int i = 0; i < size; i++) {
                     float itemX = event.getHistoricalX(i);
